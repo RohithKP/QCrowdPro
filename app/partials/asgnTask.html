@@ -1,0 +1,27 @@
+<div class="outer " >
+  <div class="top">
+    <div class="container inner-wrapper">
+          <div class="mar-20-b"><h5>TestCase Name</h5>Loremasd sadas</div>
+          <div class="mar-20-b "><h5>TestCase Description</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class=" mar-20-b"><h5>Precondition</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="mar-20-b "><h5>priority</h5>Lorem igdfg thau .</div>
+          <hr>
+          <div class="col-md-8 null-pad brdiv">
+                <span class="">STEPS</span>
+                <li ng-repeat="step in steps['42']" class="pad-20-t cust-pie-legend" ng-click="select($index)" ng-class="{'li-br':selected==$index}">
+                  <span class="block">{{$index+1}}.{{step['que']}}</span>
+                  <span class="text-muted block check-text">{{step['check']}}</span>
+                </li>
+          </div>
+          <div  class="col-md-4 null-pad pad-20-rl">
+              <span class="heading">Additional Information</span>
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris reprehenderit in voluptate .
+              </span>
+          </div>
+          <div class="col-md-12 text-center pad-20-tb">
+            <button type="" class="btn btn-custom-dark" name="button" ng-click="helpers.modalOpen('partials/assignTasktpl.html','tskInstanceCtrl','',assgnTskResolver)">PICK TASK</button>
+          </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="outer ">
+  <div class="top">
+    <div id="proDash" class="container">
+      <uib-tabset >
+        <uib-tab index="0"  heading="TASKS">
+          <div class="detail-wrapper">
+          <uib-accordion>
+            <uib-accordion-group heading="ASSIGNED TASK" template-url="group-template.html">
+
+            </uib-accordion-group>
+            <uib-accordion-group heading="SUGGESTED TASK" template-url="group-template.html">
+              <table id="sTask" class="table">
+                <tr ng-repeat="stask in sugTask ">
+                  <td><input type="checkbox" name=""></td>
+                  <td>{{stask.name}}</td>
+                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>V 40.1</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
+                </tr>
+              </table>
+            </uib-accordion-group>
+          </uib-accordion>
+          <div class=" text-right">
+            <button type="button" class="btn btn-custom-dark">PICK TASK</button>
+          </div>
+          </div>
+        </uib-tab>
+        <uib-tab index="1"  heading="HISTORY">
+
+        </uib-tab>
+      </uib-tabset>
+    </div>
+  </div>
+</div>
+
+<!-- template -->
+
+<script type="text/ng-template" id="group-template.html">
+  <div class="panel {{panelClass || 'panel-default'}}">
+    <div class="panel-heading">
+      <span  href tabindex="0" class="accordion-toggle"  uib-accordion-transclude="heading">
+          <a ng-click="toggleOpen()" > {{heading}}
+        <i class="pull-right fa fa-angle-down edit-icon" ng-class="{'fa-rotate-180':isOpen}"></i></a>
+      </span>
+    </div>
+    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+      <div class="panel-body" ng-transclude></div>
+    </div>
+  </div>
+</script>

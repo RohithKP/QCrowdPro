@@ -1,0 +1,105 @@
+{
+	"1": [{
+		"id": 1,
+		"ques": "1. Click on the white '+' on the orange background in the left side bar(not in the logo in the header)",
+		"expected": "Do you see a list of Share Service with a Find dialog?"
+	}, {
+		"id": 2,
+		"ques": "2. Manually type '100zakladok' in the Find dialog(does not need to be an exact match)",
+		"expected": "Do you see a list of Share Service filtered for the 100zakladok service?"
+	}, {
+		"id": 3,
+		"ques": "3. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 4,
+		"ques": "4. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 5,
+		"ques": "5. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 6,
+		"ques": "6. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}]
+,
+	"2": [{
+		"id": 1,
+		"ques": "1. Click on the white '+' on the orange background in the left side bar(not in the logo in the header)",
+		"expected": "Do you see a list of Share Service with a Find dialog?"
+	}, {
+		"id": 2,
+		"ques": "2. Manually type '100zakladok' in the Find dialog(does not need to be an exact match)",
+		"expected": "Do you see a list of Share Service filtered for the 100zakladok service?"
+	}, {
+		"id": 3,
+		"ques": "3. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 4,
+		"ques": "4. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 5,
+		"ques": "5. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 6,
+		"ques": "6. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}]
+,
+	"3": [{
+		"id": 1,
+		"ques": "1. Click on the white '+' on the orange background in the left side bar(not in the logo in the header)",
+		"expected": "Do you see a list of Share Service with a Find dialog?"
+	}, {
+		"id": 2,
+		"ques": "2. Manually type '100zakladok' in the Find dialog(does not need to be an exact match)",
+		"expected": "Do you see a list of Share Service filtered for the 100zakladok service?"
+	}, {
+		"id": 3,
+		"ques": "3. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 4,
+		"ques": "4. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 5,
+		"ques": "5. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 6,
+		"ques": "6. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}]
+,
+	"4": [{
+		"id": 1,
+		"ques": "1. Click on the white '+' on the orange background in the left side bar(not in the logo in the header)",
+		"expected": "Do you see a list of Share Service with a Find dialog?"
+	}, {
+		"id": 2,
+		"ques": "2. Manually type '100zakladok' in the Find dialog(does not need to be an exact match)",
+		"expected": "Do you see a list of Share Service filtered for the 100zakladok service?"
+	}, {
+		"id": 3,
+		"ques": "3. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 4,
+		"ques": "4. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 5,
+		"ques": "5. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}, {
+		"id": 6,
+		"ques": "6. Click on the icon for the 100zakladok service",
+		"expected": "Do you see either an option to log into 100zakladok or a way to share the last page?"
+	}]
+}
