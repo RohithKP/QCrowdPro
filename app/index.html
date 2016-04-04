@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="QCrowdPro">
+<head>
+  <meta charset="utf-8">
+  <title>QCrowdPro</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src='js/lib/angular.js'></script>
+  <script type="text/javascript" src='js/lib/angular-resource.js'></script>
+  <script type="text/javascript" src='js/lib/ui-bootstrap-tpls-1.2.4.js'></script>
+  <script type="text/javascript" src='js/lib/angular-ui-router.js'></script>
+  <script type="text/javascript" src="js/lib/angular-animate.js"></script>
+</head>
+<body popover-close exclude-class="exclude">
+  <!-- NAVIGATION -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="nav-brand" ui-sref="#"><img src="assets/images/QB_logo.png" alt="" /></a>
+      </div>
+      <div id="userDown" class="navbar-collapse collapse">
+        <!-- <ul class="nav navbar-nav">
+        <li><a ui-sref="login" ui-sref-active="">login</a></li>
+      </ul> -->
+      <div class="text-right" ng-hide="$state.current.name=='login' || $state.current.name=='register'">
+        <span class="inline-block">
+          <span class="block welcome">Welcome</span>
+          <span class="user-name block">Jacob Mathen</span>
+        </span>
+        <img  class="pull-right user-img img-circle exclude" src="assets/images/users/two.jpg" popover popover-placement="bottom-right" uib-popover-template="'userData.html'"  popover-elem/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-view-wrapper">
+  <div ui-view >
+    <i class="fa fa-spinner fa-spin fa-5x" style="position:absolute;left:50%;top:50%;"></i>
+  </div>
+  <!-- <pre>
+  $state = {{$state.current.name}}
+  $stateParams = {{$stateParams}}
+  $state full url = {{ $state.$current.url.source }}
+</pre> -->
+</div>
+<footer>
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <div class="navbar-collapse collapse" id="footer-body">
+        <ul class="nav navbar-nav">
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script id="userData.html" type="text/ng-template">
+  <div  class="popup popupHover">
+    <ul class="fa-i-margin-right">
+      <li><i class="fa fa-user fa-lg"></i><span>My Profile</span></li>
+      <li ui-sref="dashboard.proflist"  ui-sref-active=""><i class="fa fa-list-alt fa-lg"></i></i><span >List Of Members</span></li>
+      <li><i class="fa fa-cogs fa-lg"></i><span >Settings</span></li>
+      <li ui-sref="login"><i class="fa fa-sign-out fa-lg"></i><span>Log Out</span></li>
+    </ul>
+  </div>
+</script>
+<script type="text/javascript" src="js/custom.js">  </script>
+<script type="text/javascript" src="directives/validation.js"></script>
+<script type="text/javascript" src="directives/popover.js"></script>
+<script type="text/javascript" src="directives/uiBreadcrumbs.js"></script>
+<script type="text/javascript" src="services/helpers.js"></script>
+<script type="text/javascript" src="services/dataFetch.js"></script>
+<script type="text/javascript" src="controllers/validationCtrl.js"></script>
+</body>
+</html>
