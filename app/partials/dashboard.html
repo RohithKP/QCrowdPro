@@ -7,7 +7,7 @@
           <uib-accordion>
             <uib-accordion-group heading="ASSIGNED TASK" template-url="group-template.html" is-open="true">
               <table id="sTask" class="table">
-                <tr ng-repeat="stask in sugTask ">
+                <tr  ng-repeat="stask in sugTask ">
                   <td>{{$index+1}}</td>
                   <td>{{stask.name}}</td>
                   <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
@@ -16,7 +16,7 @@
             </uib-accordion-group>
             <uib-accordion-group heading="SUGGESTED TASK" template-url="group-template.html">
               <table id="sTask" class="table">
-                <tr ng-repeat="stask in sugTask ">
+                <tr ui-sref="home.asgnTask" ng-repeat="stask in sugTask ">
                   <td><input type="radio" name="radio" ng-click="select(stask)" ng-checked="tskselctd ==stask.id"></td>
                   <td>{{stask.name}}</td>
                   <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
