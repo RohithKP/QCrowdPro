@@ -49,6 +49,18 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
       displayName:'Assign Task'
     }
   })
+  .state('home.asgnTask.execute', {
+    url: '/execute',
+    views:{
+      'mainView@home':{
+        templateUrl:'partials/execute.html',
+        controller:'executeTskCtrl'
+      }
+    },
+    data:{
+      displayName:'Execute'
+    }
+  })
 
 });
 

@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <h3 class="modal-title">ASSIGN TASK</h3>
+</div>
+<div class="modal-body">
+  <div class="modal-content-wrapper">
+    <div class="col-md-6">
+      <div class="form-group has-feedback">
+        <label for="">Test Case Details</label>
+        <span class="block mar-15-b">{{taskItem.description}}</span>
+        <label for="">Environment: </label>
+        <span class="">{{taskItem.environment}}</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="">Choose Browsers</label>
+      <div class="border-1px">
+        <!-- <span><i ng-repeat="browser in taskItem.browsers" class="fa fa-{{browser.name}} modal-browser-icons muted"  ng-class="{'browser-selected':brarray.indexOf(browser.name) >-1}" ng-click="helpers.toggleSelect(brarray,browser.name)"></i></span> -->
+        <span class="browser-icon-wrapper2"><span class="browser-icon muted" ng-repeat="browser in taskItem.browsers" ng-class="{'browser-selected':brarray.indexOf(browser.name) >-1}" ng-click="helpers.toggleSelect(brarray,browser.name)"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span>
+      </div>
+    </div>
+    <div class="col-md-12 text-center mar-right-20 mar-top-20">
+      <button class="btn btn-custom-light" type="button" ng-click="cancel()">CANCEL</button>
+      <button class="btn btn-custom-dark" type="button" ng-click="proceed()">PICK TASK</button>
+    </div>
+  </div>
+</div>

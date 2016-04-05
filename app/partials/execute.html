@@ -1,0 +1,36 @@
+<div class="outer ">
+  <div class="top">
+    <div id="asgnTask"  class="container inner-wrapper">
+      <div class="flex-row col-md-12 null-pad">
+        <div class="col-md-7 pad-30-rl">
+          <span>STEPS</span>
+        </div>
+        <div class="col-md-5 pad-30-rl">
+          <span>USER1</span>
+          <span class="browser-icon-wrapper2 pull-right"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span>
+        </div>
+      </div>
+      <div class="mar-20-b" ng-repeat="step in steps['1']">
+        <div class="flex-row col-md-12 null-pad">
+          <div  class=" flex-col col-md-7 brdiv">
+            <span class="block">{{$index+1}}.{{step['ques']}}</span>
+            <span class="text-muted block check-text">{{step['expected']}}</span>
+          </div>
+          <div class="flex-col  col-md-5 pad-30-rl">
+            <div class="">
+              <span class="heading">Status</span>
+              <span class="pad-10-r"><input type="radio" name="name" value=""><span class="pad-10-rl">Passed</span></span>
+              <span class="pad-10-r"><input type="radio" name="name" value=""><span class="pad-10-rl">Failed</span></span>
+              <span class="pad-10-r"><input type="radio" name="name" value=""><span class="pad-10-rl">No Result</span></span>
+            </div>
+            <div class="form-group">
+              <span class="heading">Comments</span>
+              <textarea name="name" class="form-control txtarea" placeholder="Add you comments.."></textarea>
+            </div>
+            <span><i class="fa fa-camera mar-10-r"></i><a>ADD SCREENSHOT</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
