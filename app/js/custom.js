@@ -1,4 +1,4 @@
-angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils.directives.uiBreadcrumbs','ngResource']).config(function ($stateProvider,$urlRouterProvider) {
+angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils.directives.uiBreadcrumbs','ngResource','ngFileUpload']).config(function ($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/login');
 
   $stateProvider
@@ -33,7 +33,7 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
     }
   })
   .state('home.asgnTask', {
-    url: '/assignTask',
+    url: '/assignTask/:id',
     views:{
       'mainView@home':{
         templateUrl:'partials/asgnTask.html',
@@ -43,6 +43,9 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
     resolve:{
       steps:function (dataFactory) {
         return dataFactory.steps.query().$promise.then();
+      },
+      id:function ($stateParams) {
+        return $stateParams.id;
       }
     },
     data:{
