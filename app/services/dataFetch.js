@@ -1,8 +1,18 @@
 angular.module('QCrowdPro').factory('dataFactory',['$resource',function($resource) {
   return{
-    steps: $resource('./assets/json/steps.json',{}, { query: {method:'GET', isArray: false}}),
+    steps: $resource('./assets/json/steps.json',{}, {
+       query: {
+         method:'GET',
+          isArray: false
+        }
+     }),
     sTask: $resource('./assets/json/sugested_tasks.json',{}),
-    aTask: $resource('./assets/json/tasks.json',{},{ query: {method:'GET', isArray: false}})
+    aTask: $resource('./assets/json/tasks.json',{},{
+      query: {
+        method:'GET',
+      isArray: false
+    }
+  })
   };
 
 }]);
