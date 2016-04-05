@@ -1,5 +1,5 @@
-angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','dataFactory',function ($scope,$stateParams,dataFactory) {
-
+angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','dataFactory','sTask','helpers',function ($scope,$stateParams,dataFactory,sTask,helpers) {
+$scope.helpers = helpers;
     dataFactory.steps.query().$promise.then(function (data) {
          $scope.steps = data;
      },function (error) {
@@ -12,6 +12,15 @@ angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','
        $scope.selected = index;
     };
 
+$scope.task = sTask[$stateParams.id-1];
+
+$scope.pickTskResolver = {
+          message:function () {
+            return{
+              taskItem:$scope.task
+            }
+          }
+}
     // $scope.testerOptions =   {
     //   options:    $scope.testers,
     //   selected:    $scope.testers[0]
