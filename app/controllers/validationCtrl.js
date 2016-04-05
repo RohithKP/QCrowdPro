@@ -4,7 +4,7 @@ angular.module('QCrowdPro').controller('validationCtrl',['$scope','$state',funct
     $scope.$broadcast('show-errors-check-validity');
     if ($scope.loginForm.$valid) {
       $scope.reset();
-       $state.go('dashboard');
+       $state.go('home');
     }
   };
   $scope.submit = function () {
