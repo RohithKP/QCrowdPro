@@ -5,21 +5,27 @@
         <uib-tab index="0"  heading="TASKS">
           <div class="detail-wrapper">
           <uib-accordion>
-            <uib-accordion-group heading="ASSIGNED TASK" template-url="group-template.html">
-
+            <uib-accordion-group heading="ASSIGNED TASK" template-url="group-template.html" is-open="true">
+              <table id="sTask" class="table">
+                <tr ng-repeat="stask in sugTask ">
+                  <td>{{$index+1}}</td>
+                  <td>{{stask.name}}</td>
+                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
+                </tr>
+              </table>
             </uib-accordion-group>
             <uib-accordion-group heading="SUGGESTED TASK" template-url="group-template.html">
               <table id="sTask" class="table">
                 <tr ng-repeat="stask in sugTask ">
-                  <td><input type="checkbox" name=""></td>
+                  <td><input type="radio" name="radio" ng-click="select(stask)" ng-checked="tskselctd ==stask.id"></td>
                   <td>{{stask.name}}</td>
-                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>V 40.1</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
+                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
                 </tr>
               </table>
             </uib-accordion-group>
           </uib-accordion>
           <div class=" text-right">
-            <button type="button" class="btn btn-custom-dark">PICK TASK</button>
+            <button type="button" class="btn btn-custom-dark" ng-click="helpers.modalOpen('partials/pickTask.tpl.html','pickTskInstanceCtrl','700',pickTskResolver)">PICK TASK</button>
           </div>
           </div>
         </uib-tab>

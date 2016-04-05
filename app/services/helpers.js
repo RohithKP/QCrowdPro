@@ -7,6 +7,7 @@ angular.module("QCrowdPro").factory('helpers', function($uibModal) {
       }else{
         array.push(arg);
       }
+      console.log(array);
     },
     empty : function (array) {
       return array[0]==undefined;
