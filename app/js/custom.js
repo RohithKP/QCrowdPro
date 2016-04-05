@@ -1,4 +1,4 @@
-angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils.directives.uiBreadcrumbs','ngResource']).config(function ($stateProvider,$urlRouterProvider) {
+angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils.directives.uiBreadcrumbs','ngResource','ngFileUpload']).config(function ($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/login');
 
   $stateProvider
@@ -47,6 +47,18 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
     },
     data:{
       displayName:'Assign Task'
+    }
+  })
+  .state('home.asgnTask.execute', {
+    url: '/execute',
+    views:{
+      'mainView@home':{
+        templateUrl:'partials/execute.html',
+        controller:'executeTskCtrl'
+      }
+    },
+    data:{
+      displayName:'Execute'
     }
   })
 

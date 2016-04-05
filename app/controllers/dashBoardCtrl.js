@@ -1,5 +1,7 @@
-angular.module('QCrowdPro').controller('dashBoardCtrl',['$scope','sTask',function ($scope,sTask) {
+angular.module('QCrowdPro').controller('dashBoardCtrl',['$scope','sTask','helpers',function ($scope,sTask,helpers) {
+$scope.helpers = helpers;
 $scope.sugTask=[];
+$scope.tskselctd = undefined;
  sTask.$promise.then(
     function (data) {
         $scope.sugTask =data;
@@ -14,5 +16,15 @@ $scope.sugTask=[];
  //      console.log(error);
  //    }
  // );
-
+ $scope.select = function (stask) {
+   $scope.tskselctd = stask;
+ }
+ 
+$scope.pickTskResolver = {
+  message:function () {
+        return {
+            taskItem:$scope.tskselctd
+            }
+        }
+}
 }])
