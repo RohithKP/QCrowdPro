@@ -408,6 +408,9 @@ div.modal-env-wrapper.bar:hover i {display: inline;}
 .modal-550{
   max-width: 550px;
 }
+.modal-700{
+  min-width: 700px;
+}
 }
 .modal-body{
       padding: 15px 45px;
@@ -424,7 +427,7 @@ div.modal-env-wrapper.bar:hover i {display: inline;}
 .heading{
   display: block;
   font-weight: 500;
-  padding: 20px 0 0px 0;
+  padding: 20px 0 10px 0;
 }
 .mute-input[disabled]{
   border: none;
@@ -644,6 +647,7 @@ margin-right: 10px;
 .inner-wrapper{
   background-color: #fff;
   padding: 30px;
+  border-radius: 5px;
 }
 
 .dis-table{
@@ -676,6 +680,9 @@ margin-right: 10px;
 .pad-15-rl{
   padding: 0 15px;
 }
+.pad-30-rl{
+  padding: 0 30px;
+}
 .pad-20-rl{
   padding: 0 20px;
 }
@@ -693,6 +700,9 @@ input[type=radio].mar-15-r{
 }
 .mar-15-r{
   margin-right: 15px;
+}
+.mar-10-r{
+  margin-right: 10px;
 }
 .mar-20-b{
   margin-bottom: 20px;
@@ -800,3 +810,15 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 16px 0px;
     border: none;
   }
+.flex-row{
+  display: flex;
+}
+.flex-col{
+    margin-bottom: 20px;
+}
+#asgnTask .brdiv{
+padding: 40px 30px;
+}
+#asgnTask.inner-wrapper{
+padding: 30px 0;
+}
