@@ -446,7 +446,7 @@ div.modal-env-wrapper.bar:hover i {display: inline;}
   position: relative;
 }
 
-.mar-right-20 button:first-child{
+.mar-right-20 [type='button']:first-child{
   margin-right: 20px;
 }
 
@@ -711,7 +711,7 @@ input[type=radio].mar-15-r{
   margin-bottom: 20px;
 }
 .brdiv{
-  border-right: 1px solid #ccc;
+  border-right: 1px solid rgba(142, 142, 142, 0.45);
 margin-top: -20px;
 padding: 40px 0;
 }
@@ -832,4 +832,17 @@ padding: 30px 0;
   width: 225px;
   height: 100px;
 float: left;
+}
+.bottom-fixd-btn{
+width:100%;
+border-top: 1px solid rgba(142, 142, 142, 0.45);;
+padding: 20px 40px 0 0;
+overflow: auto;
+}
+.scroll-wrapper{
+     overflow: auto;
+     height: 360px;
+     float: left;
+     width: 100%;
+
 }
