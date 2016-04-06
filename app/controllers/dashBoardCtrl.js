@@ -22,7 +22,6 @@ $scope.tskselctd = undefined;
    }else{
     $scope.tskselctd = stask
     }
-console.log($scope.tskselctd);
  }
 
 $scope.pickTskResolver = {
