@@ -7,7 +7,6 @@ angular.module("QCrowdPro").factory('helpers', function($uibModal) {
       }else{
         array.push(arg);
       }
-      console.log(array);
     },
     empty : function (array) {
       return array[0]==undefined;
@@ -28,7 +27,6 @@ angular.module("QCrowdPro").factory('helpers', function($uibModal) {
         array.length=0;
         angular.forEach(items,function(item){
           array.push(item.id);
-          console.log(array);
         })
       }else {
            array.length=0;
@@ -41,7 +39,6 @@ angular.module("QCrowdPro").factory('helpers', function($uibModal) {
        if(pos>-1){
        items.splice(pos,1);
        }
-       console.log(pos);
       });
         array.length=0;
     },
@@ -60,7 +57,6 @@ angular.module("QCrowdPro").factory('helpers', function($uibModal) {
 
       modalInstance.result.then(function (x) {
       }, function () {
-      console.log('Modal dismissed at: ' + new Date());
       });
     }
 
