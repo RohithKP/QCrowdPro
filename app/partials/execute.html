@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-5 pad-30-rl">
           <span>USER1</span>
-          <span class="browser-icon-wrapper2 pull-right"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span>
+          <span class="browser-icon-wrapper2 pull-right"><span class="browser-icon muted" ng-repeat="browser in stask.browsers" ><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><span class='plt-version'>{{browser['platform-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span>
         </div>
       </div>
       <div class="scroll-wrapper">
@@ -28,11 +28,11 @@
                 <span class="heading">Comments</span>
                 <textarea name="name" class="form-control txtarea" placeholder="Add you comments.."></textarea>
               </div>
-              <span ng-show="step.picFile==null"><i class="fa fa-camera mar-10-r"></i><a ngf-select ng-model="step.picFile" ng-click="" class="underline">ADD SCREENSHOT</a></span>
-              <span ng-show="step.picFile!=null"><img   ngf-thumbnail="step.picFile" class="thumb"> <span ng-click="remove(step)" ><i class="fa fa-times-circle pull-left"></i></span></span>
-            </div>
+            <span ng-show="step.picFile==null"><i class="fa fa-camera mar-10-r"></i><a ngf-select ng-model="step.picFile" accept="image/*" class="underline" ngf-resize="{width: 250, height: 150}">ADD SCREENSHOT</a></span>
+            <span ng-show="step.picFile!=null"><img   ngf-thumbnail="step.picFile" class="pull-left"> <span ng-click="remove(step)" ><i class="fa fa-times-circle pull-left"></i></span></span>
           </div>
         </div>
+      </div>
       </div>
       <div class="bottom-fixd-btn">
         <div class="mar-right-20 pull-right abs-wrapper">

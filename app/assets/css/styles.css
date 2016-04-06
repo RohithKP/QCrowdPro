@@ -29,7 +29,7 @@ a:focus {
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-    border-top: 2px solid red;
+    border-top: 2px solid #FF4F02;
 }
 
 /*login*/
@@ -302,13 +302,7 @@ border-radius: 0 0 4px 4px  ;
 .popover-content{
   padding: 0;
 }
-td .fa{
-  margin-right: 6px;
-}
 
-td{
-  position: relative;
-}
 /*.browser-icon-wrapper:hover{
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -845,4 +839,10 @@ overflow: auto;
      float: left;
      width: 100%;
 
+}
+.plt-version{
+position: absolute;
+top: 0;
+font-size: 9px;
+right: 18px;
 }
