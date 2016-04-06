@@ -1,23 +1,32 @@
 
-angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','steps','sTask','helpers',function ($scope,$stateParams,steps,sTask,helpers) {
-    $scope.helpers = helpers;
-    steps.$promise.then(function (data) {
-         $scope.steps = data;
-     },function (error) {
-       console.log(error);
-     })
-    $scope.selected = 0;
+angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','steps','sTask','helpers','id',function ($scope,$stateParams,steps,sTask,helpers,id) {
+  $scope.helpers = helpers;
+  steps.$promise.then(function (data) {
+    $scope.steps = data;
+  },function (error) {
+    console.log(error);
+  })
 
-    $scope.select= function(index) {
-       $scope.selected = index;
-    };
-$scope.task = sTask[$stateParams.id-1];
+  $scope.selected = 0;
 
-$scope.pickTskResolver = {
+  $scope.select= function(index) {
+    $scope.selected = index;
+  };
+
+  sTask.$promise.then(function (data) {
+      pos = data.map(function (e) {
+          return e.id;
+        }).indexOf(parseInt(id));
+      $scope.task = sTask[pos];
+  },function () {
+
+  })
+
+  $scope.pickTskResolver = {
     message:function () {
-        return{
-              taskItem:$scope.task
-        }
+      return{
+        taskItem:$scope.task
+      }
     }
   }
 }]);
