@@ -1,4 +1,4 @@
-angular.module('QCrowdPro').controller('executeTskCtrl',function ($scope,steps,sTask,id) {
+angular.module('QCrowdPro').controller('executeTskCtrl',function ($scope,steps,sTask,id,browserSelected) {
 
 steps.$promise.then(function (data) {
   $scope.steps = data;
@@ -6,6 +6,7 @@ steps.$promise.then(function (data) {
   console.log(error);
 });
 
+$scope.browser = browserSelected;
 sTask.$promise.then(function (data) {
     pos = data.map(function (e) {
         return e.id;
