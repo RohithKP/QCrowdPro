@@ -24,16 +24,16 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
       sTask:function (dataFactory) {
         return dataFactory.sTask.query();
       },
-      // aTask:function (dataFactory) {
-      //   return dataFactory.aTask.query();
-      // }
+      aTask:function (dataFactory) {
+        return dataFactory.aTask.query();
+      }
     },
     data:{
       displayName:'Home'
     }
   })
   .state('home.asgnTask', {
-    url: '/assignTask',
+    url: '/assignTask/:id',
     views:{
       'mainView@home':{
         templateUrl:'partials/asgnTask.html',
@@ -43,6 +43,9 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
     resolve:{
       steps:function (dataFactory) {
         return dataFactory.steps.query().$promise.then();
+      },
+      id:function ($stateParams) {
+        return $stateParams.id;
       }
     },
     data:{

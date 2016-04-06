@@ -7,10 +7,10 @@ angular.module('QCrowdPro').factory('dataFactory',['$resource',function($resourc
         }
      }),
     sTask: $resource('./assets/json/sugested_tasks.json',{}),
-    aTask: $resource('./assets/json/tasks.json',{},{
+    aTask: $resource('./assets/json/asgndTsk.json',{},{
       query: {
         method:'GET',
-      isArray: false
+      isArray: true
     }
   })
   };

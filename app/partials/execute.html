@@ -27,7 +27,8 @@
               <span class="heading">Comments</span>
               <textarea name="name" class="form-control txtarea" placeholder="Add you comments.."></textarea>
             </div>
-            <span><i class="fa fa-camera mar-10-r"></i><a ngf-select>ADD SCREENSHOT</a></span>
+            <span ng-show="step.picFile==null"><i class="fa fa-camera mar-10-r"></i><a ngf-select ng-model="step.picFile" accept="image/*" class="underline" ngf-resize="{width: 250, height: 150}">ADD SCREENSHOT</a></span>
+            <span ng-show="step.picFile!=null"><img   ngf-thumbnail="step.picFile" class="pull-left"> <span ng-click="remove(step)" ><i class="fa fa-times-circle pull-left"></i></span></span>
           </div>
         </div>
       </div>
