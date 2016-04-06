@@ -29,7 +29,7 @@ a:focus {
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-    border-top: 2px solid red;
+    border-top: 2px solid #FF4F02;
 }
 
 /*login*/

@@ -1,3 +1,4 @@
+
 angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','steps','sTask','helpers','id',function ($scope,$stateParams,steps,sTask,helpers,id) {
   $scope.helpers = helpers;
   steps.$promise.then(function (data) {

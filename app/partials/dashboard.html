@@ -10,7 +10,15 @@
                 <tr ui-sref="home.asgnTask.execute({id:stask.id})" ng-repeat="stask in sugTask ">
                   <td>{{$index+1}}</td>
                   <td>{{stask.name}}</td>
-                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
+                  <td>
+                    <span class="browser-icon-wrapper2">
+                      <span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}">
+                        <i class="fa fa-{{browser.platform}} platform-icon"></i>
+                        <span class='version'>{{browser['browser-ver']}}</span>
+                        <i  class="fa fa-{{browser.name}}">&nbsp;</i>
+                      </span>
+                    </span>
+                  </td>
                 </tr>
               </table>
             </uib-accordion-group>
@@ -19,7 +27,15 @@
                 <tr ui-sref="home.asgnTask({id:stask.id})" ng-repeat="stask in sugTask ">
                   <td ng-click="$event.stopPropagation();"><input type="radio" name="radio" ng-click=" select(stask)" ng-checked="tskselctd==stask"></td>
                   <td>{{stask.name}}</td>
-                  <td><span class="browser-icon-wrapper2"><span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}"><i class="fa fa-{{browser.platform}} platform-icon"></i><span class='version'>{{browser['browser-ver']}}</span><i  class="fa fa-{{browser.name}}">&nbsp;</i></span></span></td>
+                  <td>
+                    <span class="browser-icon-wrapper2">
+                      <span class="browser-icon" ng-repeat="browser in stask.browsers" ng-class="{pass:browser.status==1,fail:browser.status==0,muted:browser.status==-1}">
+                        <i class="fa fa-{{browser.platform}} platform-icon"></i>
+                        <span class='version'>{{browser['browser-ver']}}</span>
+                        <i  class="fa fa-{{browser.name}}">&nbsp;</i>
+                      </span>
+                    </span>
+                  </td>
                 </tr>
               </table>
             </uib-accordion-group>
