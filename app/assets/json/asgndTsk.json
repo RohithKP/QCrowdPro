@@ -1,6 +1,6 @@
 [{
 	"id": 1,
-	"name": "Car tempus dictum",
+	"name": "Carg venus dictum",
 	"description":"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua.",
 	"environment":"windows 10",
 	"browsers": [{
@@ -24,12 +24,10 @@
 	}]
 }, {
 	"id": 2,
-	"name": "Nunc concetur orci",
+	"name": "Batr ecftr orci",
 	"description":"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua.",
 	"environment":"windows 10",
 	"browsers": [{
-		"platform-ver": "10",
-		"browser-ver": "V 40.1",
 		"platform": "windows",
 		"name": "firefox",
 		"status": -1
@@ -48,7 +46,7 @@
 	}]
 }, {
 	"id": 3,
-	"name": "Dk sure rem",
+	"name": "Mk ferr rem",
 	"description":"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua.",
 	"environment":"windows 10",
 	"browsers": [{
@@ -72,7 +70,7 @@
 	}]
 }, {
 	"id": 4,
-	"name": "Savi main",
+	"name": "Der fess",
 	"description":"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod magna aliqua.",
 	"environment":"windows 10",
 	"browsers": [{

@@ -24,9 +24,9 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
       sTask:function (dataFactory) {
         return dataFactory.sTask.query();
       },
-      // aTask:function (dataFactory) {
-      //   return dataFactory.aTask.query();
-      // }
+      aTask:function (dataFactory) {
+        return dataFactory.aTask.query();
+      }
     },
     data:{
       displayName:'Home'

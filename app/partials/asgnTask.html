@@ -8,7 +8,7 @@
           <hr>
           <div class="col-md-8 null-pad brdiv">
                 <span class="">STEPS</span>
-                <li ng-repeat="step in steps['2']" class="pad-20-t cust-pie-legend" ng-click="select($index)" ng-class="{'li-br':selected==$index}">
+                <li ng-repeat="step in steps[2]" class="pad-20-t cust-pie-legend" ng-click="select($index)" ng-class="{'li-br':selected==$index}">
                   <span class="block">{{$index+1}}.{{step['ques']}}</span>
                   <span class="text-muted block check-text">{{step['expected']}}</span>
                 </li>
@@ -20,7 +20,7 @@
               </span>
           </div>
           <div class="col-md-12 text-center pad-20-tb">
-            <a ui-sref="home.asgnTask.execute">exec</a>
+              <a type="button" class="btn btn-custom-dark" ui-sref="home.asgnTask.execute">EXECUTE</a>
               <button type="button" class="btn btn-custom-dark" ng-click="helpers.modalOpen('partials/pickTask.tpl.html','pickTskInstanceCtrl','700',pickTskResolver)">PICK TASK</button>
           </div>
     </div>
