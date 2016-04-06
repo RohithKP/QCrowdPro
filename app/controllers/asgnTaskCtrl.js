@@ -1,5 +1,5 @@
 
-angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','steps','sTask','helpers','id',function ($scope,$stateParams,steps,sTask,helpers,id) {
+angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','steps','sTask','helpers','id','browserSelected',function ($scope,$stateParams,steps,sTask,helpers,id,browserSelected) {
   $scope.helpers = helpers;
   steps.$promise.then(function (data) {
     $scope.steps = data;
@@ -21,6 +21,8 @@ angular.module('QCrowdPro').controller('asgnTaskCtrl',['$scope','$stateParams','
   },function () {
 
   })
+console.log($stateParams);
+  $scope.browserSelected =browserSelected;
 
   $scope.pickTskResolver = {
     message:function () {

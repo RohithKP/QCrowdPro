@@ -34,6 +34,7 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
   })
   .state('home.asgnTask', {
     url: '/assignTask/:id',
+    params:{browserSelected:null},
     views:{
       'mainView@home':{
         templateUrl:'partials/asgnTask.html',
@@ -46,6 +47,9 @@ angular.module('QCrowdPro',['ui.router','ui.bootstrap','ngAnimate','angularUtils
       },
       id:function ($stateParams) {
         return $stateParams.id;
+      },
+      browserSelected:function ($stateParams) {
+        return $stateParams.browserSelected;
       }
     },
     data:{
