@@ -17,9 +17,14 @@ $scope.tskselctd = undefined;
  //    }
  // );
  $scope.select = function (stask) {
-   $scope.tskselctd = stask;
+   if ($scope.tskselctd == stask) {
+     $scope.tskselctd = undefined;
+   }else{
+    $scope.tskselctd = stask
+    }
+console.log($scope.tskselctd);
  }
- 
+
 $scope.pickTskResolver = {
   message:function () {
         return {
