@@ -454,9 +454,7 @@ div.modal-env-wrapper.bar:hover i {display: inline;}
 .vt-wrapper{
   position: relative;
 }
-/*.nav-pills>li{
-  width: 140px;
-}*/
+
 .nav-pills>li a{
   padding: 12px 20px;
   background-color: rgba(135, 135, 135, 0.18);
