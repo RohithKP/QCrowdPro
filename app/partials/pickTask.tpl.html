@@ -14,16 +14,16 @@
     </div>
     <div class="col-md-6">
       <label for="">Choose Browsers</label>
-      <div class="border-1px">
-        <!-- <span><i ng-repeat="browser in taskItem.browsers" class="fa fa-{{browser.name}} modal-browser-icons muted"  ng-class="{'browser-selected':brarray.indexOf(browser.name) >-1}" ng-click="helpers.toggleSelect(brarray,browser.name)"></i></span> -->
+      <div class="border-1px " ng-class="borderRed">
         <span class="browser-icon-wrapper2">
-        <span class="browser-icon muted" ng-repeat="browser in taskItem.browsers" ng-class="{'browser-selected':browser==browserSelected}" ng-click="tSelect(browser)">
-         <i class="fa fa-{{browser.platform}} platform-icon"></i>
-        <span class='version'>{{browser['browser-ver']}}</span>
-        <i  class="fa fa-{{browser.name}}">&nbsp;</i>
-        </span>
+          <span class="browser-icon muted" ng-repeat="browser in taskItem.browsers" ng-class="{'browser-selected':browser==browserSelected}" ng-click="tSelect(browser);borderRemove();">
+            <i class="fa fa-{{browser.platform}} platform-icon"></i>
+            <span class='version'>{{browser['browser-ver']}}</span>
+            <i  class="fa fa-{{browser.name}}">&nbsp;</i>
+          </span>
         </span>
       </div>
+      <span class="required-color pull-right" ng-show="borderRed">*Select a browser</span>
     </div>
     <div class="col-md-12 text-center mar-right-20 mar-top-20">
       <button class="btn btn-custom-light" type="button" ng-click="cancel()">CANCEL</button>
