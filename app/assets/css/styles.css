@@ -44,14 +44,14 @@ a:focus {
 .middle {
     display: table-cell;
     vertical-align: middle;
-    background-color: #f1f1f1;
+    background-color: #e6e6e6;
     padding:70px 0;
     background-image: url(../images/bg_pattern.png);
 }
 .top {
     display: table-cell;
     padding: 100px 0;
-    background-color: #f1f1f1;
+    background-color: #E6E6E6;
     background-image: url(../images/bg_pattern.png);
 }
 .inner {
