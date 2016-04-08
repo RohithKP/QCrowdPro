@@ -7,7 +7,7 @@
           <uib-accordion>
             <uib-accordion-group heading="ASSIGNED TASK" template-url="group-template.html" is-open="true">
               <table  class="table table-hover">
-                <tr ui-sref="home.asgnTask({id:stask.id})" ng-repeat="stask in sugTask ">
+                <tr ui-sref="home.asgnTask({id:stask.id})" ng-repeat="stask in assignedTask ">
                   <td>{{$index+1}}</td>
                   <td>{{stask.name}}</td>
                   <td>
@@ -43,7 +43,7 @@
             </uib-accordion-group>
           </uib-accordion>
           <div class=" text-right">
-            <button ng-show="tskselctd" type="button" class="btn btn-custom-dark" ng-click="helpers.modalOpen('partials/pickTask.tpl.html','pickTskInstanceCtrl','700',pickTskResolver)">PICK TASK</button>
+            <a ng-show="tskselctd" type="button" class="btn btn-custom-dark" ng-click="helpers.modalOpen('partials/pickTask.tpl.html','pickTskInstanceCtrl','700',pickTskResolver)">PICK TASK</a>
           </div>
           </div>
         </uib-tab>
